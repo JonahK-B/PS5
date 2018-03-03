@@ -24,7 +24,7 @@ setClass(Class = "Simpson",
            integral = "numeric"
          ),
          prototype = prototype(
-           bounds = c(X[1], X[length(X)]),
+           bounds = c(),
            X = c(),
            Y = c(),
            integral = c()
@@ -40,7 +40,7 @@ setMethod("initialize", "Simpson", function(.Object, ...) {
 )
 #' @export
 setValidity("Simpson", function(x){
-  test1 <- (object@X[1] <= object@X[length(object@X)])
+  test1 <- (X[1] <= X[length(X)])
   if(!test1){return("b must be the upper bound and a must be the lower bound")}
 }
 )

@@ -23,7 +23,7 @@ setClass(Class = "Trapezoid",
            integral = "numeric"
          ),
          prototype = prototype(
-           bounds = c(X[1], X[length(X)]),
+           bounds = c(),
            X = c(),
            Y = c(),
            integral = c()
@@ -39,7 +39,7 @@ setMethod("initialize", "Trapezoid", function(.Object, ...) {
 )
 #' @export
 setValidity("Trapezoid", function(x){
-  test1 <- (a <= b)
+  test1 <- (X[1] <= X[length(X)])
   if(!test1){return("b must be the upper bound and a must be the lower bound")}
   }
 )

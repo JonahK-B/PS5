@@ -12,7 +12,6 @@
 #' }
 #'
 #' @author Jonah Klein-Barton: \email{jonahkleinbarton@@gmail.com}
-#' @aliases
 #' @rdname Trapezoid
 #' @export
 setClass(Class = "Trapezoid",
@@ -38,8 +37,8 @@ setMethod("initialize", "Trapezoid", function(.Object, ...) {
   }
 )
 #' @export
-setValidity("Trapezoid", function(x){
-  test1 <- (X[1] <= X[length(X)])
+setValidity("Trapezoid", function(object){
+  test1 <- (object@X[1] <= object@X[length(object@X)])
   if(!test1){return("b must be the upper bound and a must be the lower bound")}
   }
 )

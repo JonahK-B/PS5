@@ -6,5 +6,12 @@ Author: Jonah Klein-Barton
 Maintainer: <jonahkleinbarton@gmail.com>
 Description: Uses the Simpson and/or Trapezoid methods to approximate the integrals of bounded functions
 License: CC0
+Collate:
+    'Trapezoid.R'
+    'Simpson.R'
+    'integrateIt.R'
+    'print.R'
 Encoding: UTF-8
 LazyData: true
+Suggests: testthat
+RoxygenNote: 6.0.1

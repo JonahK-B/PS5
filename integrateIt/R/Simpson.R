@@ -13,7 +13,6 @@
 #' }
 #'
 #' @author Jonah Klein-Barton: \email{jonahkleinbarton@@gmail.com}
-#' @aliases
 #' @rdname Simpson
 #' @export
 setClass(Class = "Simpson",
@@ -38,9 +37,9 @@ setMethod("initialize", "Simpson", function(.Object, ...) {
   return(value)
 }
 )
-#' @export
-setValidity("Simpson", function(x){
-  test1 <- (X[1] <= X[length(X)])
+#'@export
+setValidity("Simpson", function(object){
+  test1 <- (object@X[1] <= object@X[length(object@X)])
   if(!test1){return("b must be the upper bound and a must be the lower bound")}
 }
 )

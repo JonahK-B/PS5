@@ -1,0 +1,157 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `integrateIt'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\inputencoding{utf8}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Integrates Functions Using Simpson or Trapezoid Methods}
+\item[Version]\AsIs{0.1.0}
+\item[Author]\AsIs{Jonah Klein-Barton}
+\item[Maintainer]\AsIs{}\email{jonahkleinbarton@gmail.com}\AsIs{}
+\item[Description]\AsIs{Uses the Simpson and/or Trapezoid methods to approximate the integrals of bounded functions}
+\item[License]\AsIs{CC0}
+\item[Collate]\AsIs{'Trapezoid.R' 'Simpson.R' 'integrateIt.R' 'print.R'}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[Suggests]\AsIs{testthat}
+\item[RoxygenNote]\AsIs{6.0.1}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{integrateIt}{integrateIt}{integrateIt}
+%
+\begin{Description}\relax
+integrateIt
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+integrateIt(X, Y, bounds, Rule)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{X}] A list of even partitions of the bounds that the integral is beign taken on.
+
+\item[\code{Y}] A numeric list with the same dimensionality as \code{x}, equal to the height of the function at each X value. X and Y form sets of ordered pairs.
+
+\item[\code{bounds}] The minimum and maximum X values.
+
+\item[\code{Rule}] Can be either "Trap" or "Simpson". Determines which form of estimation the method will use to estimate the integral
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An object of class Squares containing
+\begin{ldescription}
+\item[\code{object}] An object of class Simpson or Trapezoid
+\end{ldescription}
+\end{Value}
+%
+\begin{Note}\relax
+This is a very simple function
+\end{Note}
+%
+\begin{Author}\relax
+Jonah Klein-Barton
+\end{Author}
+%
+\begin{Examples}
+\begin{ExampleCode}
+
+myX <- c(1,2,3,4,5)
+myY <- c(1,4,9,16,25)
+integrateIt(myX, myY, c(1,5), "Trap")
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{print,Trapezoid-method}{print}{print,Trapezoid.Rdash.method}
+%
+\begin{Description}\relax
+print
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S4 method for signature 'Trapezoid'
+print(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] An object of class Trapezoid or Simpson
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An estimation of the integral
+\end{Value}
+%
+\begin{Note}\relax
+This is a very simple function
+\end{Note}
+%
+\begin{Author}\relax
+Jonah Klein-Barton
+\end{Author}
+\inputencoding{utf8}
+\HeaderA{Simpson-class}{An estimated integral of a function}{Simpson.Rdash.class}
+%
+\begin{Description}\relax
+Object of class \code{SquaresPack} are created by the \code{addSquares} and \code{subtractSquares} functions
+\end{Description}
+%
+\begin{Details}\relax
+An object of the class `Simpson' has the following slots:
+\begin{itemize}
+
+\item \code{bounds} The lower bound and upper bound of the intergrand
+\item \code{X} An ordered list of X values, between a and b
+\item \code{Y} An ordered list of Y values, where Yn = F(Xn)
+\item \code{integral} An estimate of the integral
+
+\end{itemize}
+
+\end{Details}
+%
+\begin{Author}\relax
+Jonah Klein-Barton: \email{jonahkleinbarton@gmail.com}
+\end{Author}
+\inputencoding{utf8}
+\HeaderA{Trapezoid-class}{An estimated integral of a function}{Trapezoid.Rdash.class}
+%
+\begin{Description}\relax
+Object of class \code{SquaresPack} are created by the \code{addSquares} and \code{subtractSquares} functions
+\end{Description}
+%
+\begin{Details}\relax
+An object of the class `Trapezoid' has the following slots:
+\begin{itemize}
+
+\item \code{bounds} The lower bound and upper bound of the intergrand
+\item \code{X} An ordered list of X values, between a and b
+\item \code{Y} An ordered list of Y values, where Yn = F(Xn)
+\item \code{integral} An estimate of the integral
+
+\end{itemize}
+
+\end{Details}
+%
+\begin{Author}\relax
+Jonah Klein-Barton: \email{jonahkleinbarton@gmail.com}
+\end{Author}
+\printindex{}
+\end{document}

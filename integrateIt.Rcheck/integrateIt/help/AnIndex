@@ -1,0 +1,4 @@
+integrateIt	integrateIt
+print,Trapezoid-method	print
+Simpson-class	Simpson
+Trapezoid-class	Trapezoid

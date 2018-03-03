@@ -1,0 +1,5 @@
+Simpson-class           An estimated integral of a function
+Trapezoid-class         An estimated integral of a function
+integrateIt             integrateIt
+print,Trapezoid-method
+                        print

@@ -11,4 +11,4 @@ Encoding: UTF-8
 LazyData: true
 Suggests: testthat
 RoxygenNote: 6.0.1
-Built: R 3.4.3; ; 2018-03-03 23:47:22 UTC; windows
+Built: R 3.4.3; ; 2018-03-05 18:43:37 UTC; windows

@@ -19,6 +19,10 @@ print
 \note{
 This is a very simple function
 }
+\examples{
+myTrapezoid <- new ("Trapezoid", bounds = c(1,5), X = c(1,2,3,4,5), Y = c(1,4,9,16,25), integral = 42)
+print(myTrapezoid)
+}
 \author{
 Jonah Klein-Barton
 }

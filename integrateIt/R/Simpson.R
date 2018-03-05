@@ -40,6 +40,11 @@ setMethod("initialize", "Simpson", function(.Object, ...) {
 #'@export
 setValidity("Simpson", function(object){
   test1 <- (object@X[1] <= object@X[length(object@X)])
+  test2 <- (object@X[1] == object@bounds[1] & object@X[length(object@X)] == object@bounds[2])
+  test3 <- (length(object@X) == length(object@Y))
   if(!test1){return("b must be the upper bound and a must be the lower bound")}
+  if(!test2){return("The domain of the function must be equal to the bounds of integration")}
+  if(!test3){return("X and Y must be the same length")}
 }
 )
+

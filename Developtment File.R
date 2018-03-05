@@ -7,7 +7,7 @@ setwd("C:\Users\jonah\Documents\GitHub\PS5") #This will need to be changed to ma
 ## This is run once when the package strcuture is first created
 
 
-## At this point put the *.R files into the correcto directories and edit the DESCRIPTION file
+## At this point put the *.R files into the correct directories and edit the DESCRIPTION file
 
 ## Let's look through the R directory in this order:
 
@@ -29,8 +29,17 @@ y = c(1,4,9,16,25)
 integrateIt(x,y,c(1,5),"Simpson")
 integrateIt(x,y,c(1,5),"Trap")
 
-## Moving between classes
+myTrap <- new("Trapezoid", bounds = c(1,5), X = c(1,2,3,4,5), Y = c(1,4,9,16,25), integral = 42)
+print(myTrap)
 
+mySimpson <- new("Simpson", bounds = c(1,5), X = c(1,2,3,4,5), Y = c(1,4,9,16,25), integral = 41.33333)
+print(mySimpson)
 
+##Things which should throw errors
 
+##Bounding error
+mySimpson <- new("Simpson", bounds = c(1,4), X = c(1,2,3,4,5), Y = c(1,4,9,16,25), integral = 42)
+
+## Input length error
+mySimpson <- new("Simpson", bounds = c(1,5), X = c(1,2,3,4,5), Y = c(1,4,9,16,25,36), integral = 42)
 

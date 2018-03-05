@@ -28,11 +28,11 @@ setMethod(f="integrateIt",
             h <- (max(X) - min(X))/(length(X)-1)
             if (Rule == "Trap"){
               I <- (h/2)*(Y[1] + sum(2*Y[2:(length(Y)-1)]) + Y[length(Y)])
-              integral = new("Trapezoid", bounds = c(min(X), max(X)), X = X, Y = Y, integral = I)
+              integral = new("Trapezoid", bounds = bounds, X = X, Y = Y, integral = I)
             }
             if (Rule == "Simpson"){
               I <- (h/3)*(Y[1] + sum(c(4,2)*Y[2:(length(Y)-2)]) + 4*Y[length(Y)-1] + Y[length(Y)])
-              integral = new("Simpson", bounds = c(min(X), max(X)), X = X, Y = Y, integral = I)
+              integral = new("Simpson", bounds = bounds, X = X, Y = Y, integral = I)
             }
             return(integral)
           }

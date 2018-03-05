@@ -24,6 +24,23 @@ integrateIt(myX, myY, c(1,5), "Trap")
 
 
 
+cleanEx()
+nameEx("print")
+### * print
+
+flush(stderr()); flush(stdout())
+
+### Name: print,Trapezoid-method
+### Title: print
+### Aliases: print,Trapezoid-method
+
+### ** Examples
+
+myTrapezoid <- new ("Trapezoid", bounds = c(1,5), X = c(1,2,3,4,5), Y = c(1,4,9,16,25), integral = 42)
+print(myTrapezoid)
+
+
+
 ### * <FOOTER>
 ###
 options(digits = 7L)
